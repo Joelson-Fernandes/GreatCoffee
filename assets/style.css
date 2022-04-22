@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #FFF;
+    font-family: Manrope;
+    text-decoration: none;
+    list-style: none;
+}
+
+.backgroundImg1 {
+    position: fixed;
+    left: -29px;
+    bottom: 0;
+}
+.backgroundImg2 {
+    position: fixed;
+    right: 0;
+    z-index: -20;
+}
+
+.backgroundImgMobile {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: -20;
+}
+
+@media only screen and (max-width: 991px){
+    .backgroundImg1, .backgroundImg2 {
+        display: none;
+    }
+    .backgroundImgMobile {
+        visibility: visible;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+#container {
+    width: 65vw;
+    padding: 10px 20px 0 20px;
+}
+
+header nav.nav {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav div#logo {
+    width: 50px;
+    background-image: url(/assets/icons/logo-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav ul.navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul.navList li {
+    margin: 0 10px;
+}
+
+.btnNav {
+    padding: 10px 10px;
+    margin: 0;
+    border: 1px solid #8257E5;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+div.btnToggle {
+    width: 30px;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    background-image: url(/assets/icons/menu-buguer-open.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: 0.2s ease-in-out;
+}
+
+section#home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+section#home h1, span {
+    font-weight: 700;
+    font-size: 80px;
+}
+
+section#home span {
+    color: #000;
+    text-shadow: -1px 0 #8257E5, 0 1px #8257E5,
+      2px 0 #8257E5, 0 -1px #8257E5
+}
+
+section#home div.HomeMobile {
+    display: none;
+}
+
+section#home div.HomeMobile h2, div {
+    padding: 30px 5px;
+}
+
+@media only screen and (max-width: 991px){
+    body {
+        overflow-x: hidden;
+    }
+    #container {
+        width: 98vw;
+        padding: 0px 5px;
+    }
+    nav a.btnNav {
+        display: none;
+    }
+    header nav div#logo {
+        width: 150px;
+        background-image: url(/assets/icons/logo-mobile.svg);
+    }
+    div.btnToggle {
+        display: block;
+    }
+    div.btnToggle.active {
+        background-image: url(icons/menu-buguer-close.svg);
+    }
+    header nav.nav {
+        width: 100%;
+        padding: 0 50px;
+    }    
+    header nav.nav.active {
+        position: fixed;
+        background-color: #000000;
+    } 
+    nav ul.navList {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: #000000; 
+        transform: translateX(100%);
+        transform-origin: top;
+        transition: 0.3s ease-in;
+    }
+    nav ul.navList.active{
+        transform: translateX(0);
+    }
+    nav ul.navList li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #29292E;
+        border-top: 1px solid #29292E;
+    }
+    nav ul.navList li:hover {
+        border-left: 5px solid #8257E5;
+    }
+    nav ul.navList li a {
+        color: #E1E1E6;
+        width: 100%;
+        line-height: 50px;
+        margin-left: 10px;
+        opacity: 0;
+        transition: 0.3s ease-in;
+    }
+    nav ul.navList li a:hover {
+        color: #FFF;
+    }
+    section#home {
+        padding: 50px 0;
+    }
+    section#home h1, span {
+        font-size: 50px;
+    }
+    section#home div.HomeMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@keyframes linkAnimation {
+    from { 
+        opacity: 0; 
+        transform: translateX(50px); }
+    to { 
+        opacity: 1;
+        transform: translateX(0); }
+}
+
