@@ -2,7 +2,9 @@
 <h1 align="center"> Great Coffee </h1>
 <p align="center">Uma página web responsiva criada para um desafio do Rocketseat com HTML, CSS e JavaScript.</p>
 
-![GreatCoffee](https://user-images.githubusercontent.com/81213149/164985666-40d444b4-195f-49c7-aeeb-4950d63b4fec.png)
+![Great Coffee](https://user-images.githubusercontent.com/81213149/164986264-86e92b43-f990-4864-8c4e-6ceee76bdc92.png)
+![Great Coffee Mobile](https://user-images.githubusercontent.com/81213149/164986265-caae9b00-444c-4d3c-baab-a25735aa68aa.png)
+![Great Coffee MobileMenu](https://user-images.githubusercontent.com/81213149/164986385-c2e0da14-5911-4fe2-b4bc-c3ace2c3b8e3.png)
 
 <h3>Tecnologias ultilizadas</h3>
 
